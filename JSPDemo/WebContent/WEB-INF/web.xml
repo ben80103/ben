@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>JSPDemo</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <resource-ref>
+    <description>Oracle Datasource example</description>
+    <res-ref-name>jdbc/xe</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+  </resource-ref>
+  <servlet>
+    <description></description>
+    <display-name>HelloUserServlet</display-name>
+    <servlet-name>HelloUserServlet</servlet-name>
+    <servlet-class>HelloUserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HelloUserServlet</servlet-name>
+    <url-pattern>/HelloUserServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>InitTestServlet</display-name>
+    <servlet-name>InitTestServlet</servlet-name>
+    <jsp-file>/initTest.jsp</jsp-file>
+    <init-param>
+      <param-name>region</param-name>
+      <param-value>North America</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InitTestServlet</servlet-name>
+    <url-pattern>/initTest.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RegisterServlet</display-name>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>RegisterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/RegisterServlet</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <description></description>
+    <display-name>CampingServlet</display-name>
+    <servlet-name>CampingServlet</servlet-name>
+    <servlet-class>CampingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CampingServlet</servlet-name>
+    <url-pattern>/CampingServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
