@@ -11,6 +11,7 @@ response.setContentType("text/html;charset=UTF-8");
 <title>活動</title>
 </head>
 <body>
-活動新增成功
+活動新增成功!
+<input type="button" onclick="location.href='Campinginsert.jsp'" value="返回">
 </body>
 </html>

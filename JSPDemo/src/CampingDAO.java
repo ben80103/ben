@@ -1,6 +1,12 @@
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.sql.DataSource;
+
 import mvcdemo.bean.CampingBean;
+
 
 public class CampingDAO {
 
@@ -33,6 +39,51 @@ public class CampingDAO {
 		  return false;
     }
   }
+  
+  
+	public ArrayList<CampingBean> selectCamping(String add){
+		
 
+		ArrayList<CampingBean> hBList = new ArrayList<>();
+		
+		try (
+				
+				Statement stmt = conn.createStatement();
+				ResultSet rs = stmt.executeQuery("select * from camping ");
+				){
+			
+			
+	
+			while(rs.next()) {
+				CampingBean hB =new CampingBean();
+				
+				hB.setCampingname(rs.getString("campingname"));
+				hB.setCampingdate(rs.getString("campingdate"));
+				hB.setCampingcontent(rs.getString("campingcontent"));
+				hB.setAddress(rs.getString("address"));
+				hB.setPeople(rs.getString("people"));
+				hBList.add(hB);
+				
+				
+				}
+				}catch (SQLException e) {
+					e.printStackTrace();
+		}
+		return hBList;
+		}
+
+
+
+	
+
+
+
+	
+
+
+	
+	
+    
+  
 
 }

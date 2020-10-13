@@ -12,38 +12,47 @@ response.setDateHeader ("Expires", -1); // Prevents caching at the proxy server
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>舉辦活動</title>
+    <style>
+        fieldset {
+            width: 500px;
+            margin: 0px auto;
+            border: 8px #FFD382 groove;
+            border-radius: 15px;
+        }
+        body{
+            background: rgb(252, 218, 154);
+        }
+    </style>
 </head>
 <body>
-<h2>
-活動
-</h2>
-<form action=".\CampingServlet" method="post">
-<table  cellspacing="2" cellpadding="1" border="1" width="100%">
-<tr>
-    <td>舉辦人:</td>
-    <td><input type="text" name="campingname" size="10" maxlength="10"></td>
-</tr>
-<tr>
-    <td width="150">日期:</td>
-    <td><input type="text" name="campingdate" size="10" maxlength="20"></td>
-</tr>
-<tr>
-    <td width="300">舉辦內容:</td>
-    <td><input type="text" name="campingcontent"size="50" ></td>
-</tr>
-<tr>
-    <td width="150">地址:</td>
-    <td><input type="text" name="address" size="50" maxlength="50"></td>
-</tr>
-<tr>
-    <td>人數:</td>
-    <td><input type="text" name="people" size="20"></td>
-</tr>
 
-</table>
-<center>
-<input type="submit" name="submit" value="送出">
-</center>
-</form>
+    <form action=".\CampingServlet" method="post">
+
+        <fieldset>
+            <legend>活動新增</legend>
+            <div>舉辦人:
+                <input type="text" name="campingname" size="10" maxlength="10">
+            </div>
+            <div>日期:
+                <input type="text" name="campingdate" size="10" maxlength="20">
+            </div>
+            <div>活動名子:
+                <input type="text" name="campingcontent"size="50"    >
+        </div>
+        <div>地址:
+            <input type="text" name="address" size="50" maxlength="50">
+        </div>
+        <div>人數:
+            <input type="text" name="people" size="20">
+        </div>
+            <div>
+                <div>
+                    
+                    <input type="submit" name="submit" value="新增活動">
+                    
+                </div>
+            </div>
+        </fieldset>
+    </form>
 </body>
 </html>

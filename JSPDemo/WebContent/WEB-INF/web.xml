@@ -59,4 +59,14 @@
     <servlet-name>CampingServlet</servlet-name>
     <url-pattern>/CampingServlet</url-pattern>
   </servlet-mapping>
+   <servlet>
+    <description></description>
+    <display-name>SelectCampingServlet</display-name>
+    <servlet-name>SelectCampingServlet</servlet-name>
+    <servlet-class>SelectCampingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SelectCampingServlet</servlet-name>
+    <url-pattern>/SelectCampingServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
