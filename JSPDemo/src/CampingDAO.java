@@ -74,6 +74,24 @@ public class CampingDAO {
 
 
 
+	public void deleteCamping(String del) {
+		// TODO Auto-generated method stub
+		
+		try(
+				Statement stmt = conn.createStatement();){
+			
+				PreparedStatement rs = conn.prepareStatement("delete from camping where campingname=?");
+				rs.setString(1,del);
+				rs.executeUpdate();
+		}
+				
+	catch (SQLException e) {
+		e.printStackTrace();
+}
+	}
+
+
+
 	
 
 

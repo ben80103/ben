@@ -32,19 +32,19 @@ response.setDateHeader ("Expires", -1); // Prevents caching at the proxy server
             <legend>活動新增</legend>
             <div>舉辦人:
                 <input type="text" name="campingname" size="10" maxlength="10">
-            </div>
+            </div><br/>
             <div>日期:
                 <input type="text" name="campingdate" size="10" maxlength="20">
-            </div>
-            <div>活動名子:
-                <input type="text" name="campingcontent"size="50"    >
-        </div>
+            </div><br/>
+            <div>營地名稱:
+                <input type="text" name="campingcontent"size="20"    >
+        </div><br/>
         <div>地址:
             <input type="text" name="address" size="50" maxlength="50">
-        </div>
+        </div><br/>
         <div>人數:
-            <input type="text" name="people" size="20">
-        </div>
+            <input type="text" name="people" size="1">
+        </div><br/>
             <div>
                 <div>
                     
